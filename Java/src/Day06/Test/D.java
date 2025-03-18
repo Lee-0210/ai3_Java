@@ -1,13 +1,19 @@
 package Day06.Test;
 
-import Day06.Test.A.B;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class D {
 
 	public static void main(String[] args) {
-		A a = new A();
+		String str = "a, b, c";
+		StringTokenizer tok = new StringTokenizer(str, ",");
 		
-		A.B = a.new B();
+		while(tok.hasMoreTokens()) {
+			String token = tok.nextToken();
+			System.out.println(token.trim());
+		}
+		String[] spl = str.split(",");
+		System.out.println(Arrays.toString(spl));
 	}
-
 }
