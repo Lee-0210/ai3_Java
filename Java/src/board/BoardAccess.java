@@ -56,7 +56,7 @@ public class BoardAccess implements BoardInterface {
 
 	@Override
 	public Board read(int no) {
-		
+	 
 		return boardList[no-1];
 	}
 
