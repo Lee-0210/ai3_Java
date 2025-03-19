@@ -34,8 +34,8 @@ public class BoardAccess implements BoardInterface {
 		board.setUpdateAt(updateAt);
 		
 		boardList[no-1] = board;
-		System.out.println(board);
 		System.out.println("게시글이 등록되었습니다.");
+		System.out.println();
 		return board;
 	}
 	
@@ -50,29 +50,36 @@ public class BoardAccess implements BoardInterface {
 			System.out.println("조회된 게시글이 없습니다.");
 			return null;
 		}
-		System.out.println("게시글 목록을 조회합니다.");
+		
 		return boardList;
 	}
 
 	@Override
 	public Board read(int no) {
-		if(boardList[no-1] == null) {
-			System.out.println("선택한 게시글이 없습니다.");
-		}
 		
 		return boardList[no-1];
 	}
 
 	@Override
 	public boolean update(Board board) {
-		
-		return false;
+		if(board == null) {
+			System.out.println("선택하신 게시글은 존재하지 않습니다. \n");
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 	@Override
 	public boolean delete(int no) {
-		// TODO Auto-generated method stub
-		return false;
+		if(boardList[no-1] == null) {
+			System.out.println(no + "번 게시글은 존재하지 않스빈다.");
+			return false;
+		} else {
+			boardList[no-1] = null;
+			count--;
+			return true;
+		}
 	}
 	
 }

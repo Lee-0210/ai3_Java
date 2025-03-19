@@ -76,7 +76,6 @@ public class Board {
 
 	@Override
 	public String toString() {
-		return "Board [no=" + no + ", title=" + title + ", writer=" + writer + ", content=" + content + ", createAt="
-				+ createAt + ", updateAt=" + updateAt + "]";
+		return no + ". " + title + " --- 최근 수정일 : " + updateAt;
 	}
 }
