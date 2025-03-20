@@ -158,7 +158,7 @@ public class Main {
 							System.out.println("삭제를 취소하였습니다. \n");
 							break;
 						} else {
-							System.out.println("잘못 입력하였습니다. \n");
+							System.out.println("잘못 입력하셨습니다. \n");
 							break;
 						}
 						
