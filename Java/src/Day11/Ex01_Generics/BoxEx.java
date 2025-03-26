@@ -10,6 +10,11 @@ public class BoxEx {
 		// - 예시	: class Box <T> { }
 		// - 생성	: Box<클래스> box = new Box<타입>();
 		
+		Box<?> box;
+		box = new Box<String>();
+		box = new Box<Boolean>();
+		box = new Box<Integer>();
+		
 		Box<String> box1 = new Box<>();
 		box1.setT("물");
 		String boxName = box1.getT();
